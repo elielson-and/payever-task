@@ -1,0 +1,20 @@
+{
+  "name": "unittest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha './test/**/*.test.js' --timeout 60000"
+  },
+  "author": "Elielson Andre",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "faker": "^5.5.3",
+    "mocha": "^10.2.0",
+    "selenium-webdriver": "^4.11.1"
+  },
+  "dependencies": {
+    "webdriverio": "^8.15.4"
+  }
+}
