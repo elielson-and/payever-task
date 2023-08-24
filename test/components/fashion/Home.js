@@ -12,7 +12,7 @@ class Home {
 
     // -- App Settings --
     get editButton() {
-        return ('/html/body/app-root/app-lazy/user-dashboard/base-dashboard/div/div/div/widgets-layout/div/div/apps-widget/pe-widget/div/div/div[1]/div[1]/div[2]/div')
+        return ('/html/body/app-root/app-lazy/user-dashboard/base-dashboard/div/div/div/widgets-layout/div/div/apps-widget/pe-widget/div/div/div[1]/div[1]/div[2]')
     }
 
 }

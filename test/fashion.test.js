@@ -18,15 +18,15 @@ describe('Registration test case', () => {
     expect(await RegisterFashion.fillBusinessData()).to.be.true
   });
 
-  it('Should skip getStarted modal al', async function () {
+  it('Should skip getStarted modal', async function () {
     expect(await HomeFashion.skipGetStartedModal()).to.be.true;
   });
 
-  // it('Should set default apps', async function () {
-  //   expect(await RegisterFashion.editApps()).to.be.true;
-  // });
-
-  after(async () => {
-    await RegisterFashion.closeBrowser();
+  it('Should set apps', async function () {
+    expect(await HomeFashion.setDefaultApps()).to.be.true;
   });
+
+  // after(async () => {
+  //   await RegisterFashion.closeBrowser();
+  // });
 });

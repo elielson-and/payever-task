@@ -9,18 +9,25 @@ class HomeFashion {
 
     async skipGetStartedModal() {
         const home = new Home();
-        await this.driver.wait(until.elementLocated(By.xpath(home.getStartedButton)), 60000);
-        await this.driver.findElement(By.xpath(home.getStartedButton)).click()
-        return true;
-        // try {
-        //     await this.driver.wait(until.elementLocated(By.xpath(home.getStartedButton)), 60000);
-        //     await this.driver.findElement(By.xpath(home.getStartedButton)).click()
-        //     return true;
-        // } catch (error) {
-        //     return false;
-        // }
+        try {
+            await this.driver.wait(until.elementLocated(By.xpath(home.getStartedButton)), 60000);
+            await this.driver.findElement(By.xpath(home.getStartedButton)).click()
+            return true;
+        } catch (error) {
+            return false;
+        }
     }
 
+    async setDefaultApps() {
+        const home = new Home();
+        try {
+            await this.driver.wait(until.elementLocated(By.xpath(home.editButton)), 60000);
+            await this.driver.findElement(By.xpath(home.editButton)).click()
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
 
 
 
