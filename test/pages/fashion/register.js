@@ -1,13 +1,13 @@
-const { By, until, Builder, Key } = require('selenium-webdriver');
-const { baseUrl } = require('../../../env.js');
+const { By, until } = require('selenium-webdriver');
+const { driver, baseUrl } = require('../../../utils/TestConfig.js');
 const faker = require('faker');
-const Home = require('../../components/fashion/Home.js');
-const Register = require('../../components/fashion/Register.js');
+const Home = require('../../components/fashion/Home');
+const Register = require('../../components/fashion/Register');
 
 class RegisterFashion {
   constructor() {
-    this.driver = new Builder().forBrowser('chrome').build();
-    this.url = baseUrl
+    this.driver = driver;
+    this.url = baseUrl;
   }
 
   async openBrowser(testCase) {
@@ -90,16 +90,16 @@ class RegisterFashion {
     }
   }
 
-  async skipGetStartedModal() {
-    const home = new Home();
-    try {
-      await this.driver.wait(until.elementLocated(By.xpath(home.getStartedButton)), 60000);
-      await this.driver.findElement(By.xpath(home.getStartedButton)).click()
-      return true;
-    } catch (error) {
-      return false;
-    }
-  }
+  // async skipGetStartedModal() {
+  //   const home = new Home();
+  //   try {
+  //     await this.driver.wait(until.elementLocated(By.xpath(home.getStartedButton)), 60000);
+  //     await this.driver.findElement(By.xpath(home.getStartedButton)).click()
+  //     return true;
+  //   } catch (error) {
+  //     return false;
+  //   }
+  // }
 
 
 
